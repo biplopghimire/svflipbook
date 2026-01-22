@@ -11,14 +11,24 @@
   <title>CS Industry Report</title>
 
   <style>
-    body {
+    html, body {
       margin: 0;
-      background: #fff;
+      padding: 0;
+      background: transparent;
     }
     .wrap {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 16px;
+      padding: 0;
+      background: transparent;
+    }
+    /* Force DearFlip surfaces to be transparent */
+    .df-container,
+    .df-book-wrapper,
+    .df-book,
+    .df-page,
+    .df-ui {
+      background: transparent !important;
     }
     #flip {
       height: 90vh;
@@ -31,25 +41,8 @@
     <div
       id="flip"
       class="_df_book"
-      source="reports/consumer-ai.pdf"
-      webgl="true"
-      backgroundcolor="#ffffff">
-    </div>
+      source="reports/consumer-ai.pdf"></div>
   </div>
-
-  <!-- IMPORTANT: tell DearFlip where its dependency files live -->
-  <script>
-    // IMPORTANT: tell DearFlip where its dependency files live.
-    // Do NOT overwrite the whole object (DearFlip sets other defaults on it).
-    window.DFLIP = window.DFLIP || {};
-    window.DFLIP.pdfjsSrc = "dflip/js/libs/pdf.min.js";
-    window.DFLIP.pdfjsWorkerSrc = "dflip/js/libs/pdf.worker.min.js";
-    window.DFLIP.threejsSrc = "dflip/js/libs/three.min.js";
-    window.DFLIP.mockupjsSrc = "dflip/js/libs/mockup.min.js";
-    // Optional but helps when served from subpaths (GitHub Pages project sites)
-    window.DFLIP.cMapUrl = "dflip/js/libs/cmaps/";
-    window.DFLIP.cMapPacked = true;
-  </script>
 
   <!-- DearFlip JS -->
   <script src="dflip/js/libs/jquery.min.js"></script>
