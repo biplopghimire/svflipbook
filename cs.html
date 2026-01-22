@@ -3,18 +3,48 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <!-- DearFlip CSS -->
   <link rel="stylesheet" href="dflip/css/dflip.min.css" />
-  <title>Consumer AI Report</title>
+
+  <title>CS Industry Report</title>
+
   <style>
-    body { margin: 0; background: #fff; }
-    .wrap { max-width: 1100px; margin: 0 auto; padding: 16px; }
-    #flip { height: 85vh; }
+    body {
+      margin: 0;
+      background: #fff;
+    }
+    .wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 16px;
+    }
+    #flip {
+      height: 90vh;
+    }
   </style>
 </head>
+
 <body>
   <div class="wrap">
-    <div id="flip" class="_df_book" source="reports/consumer-ai.pdf"></div>
+    <div
+      id="flip"
+      class="_df_book"
+      source="reports/consumer-ai.pdf"
+      webgl="true"
+      backgroundcolor="#ffffff">
+    </div>
   </div>
+
+  <!-- IMPORTANT: tell DearFlip where it is hosted -->
+  <script>
+    window.DFLIP = {
+      pdfjsSrc: "dflip/js/libs/pdf.min.js",
+      pdfjsWorkerSrc: "dflip/js/libs/pdf.worker.min.js"
+    };
+  </script>
+
+  <!-- DearFlip JS -->
   <script src="dflip/js/libs/jquery.min.js"></script>
   <script src="dflip/js/dflip.min.js"></script>
 </body>
