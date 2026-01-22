@@ -36,12 +36,18 @@
     </div>
   </div>
 
-  <!-- IMPORTANT: tell DearFlip where it is hosted -->
+  <!-- IMPORTANT: tell DearFlip where its dependency files live -->
   <script>
-    window.DFLIP = {
-      pdfjsSrc: "dflip/js/libs/pdf.min.js",
-      pdfjsWorkerSrc: "dflip/js/libs/pdf.worker.min.js"
-    };
+    // IMPORTANT: tell DearFlip where its dependency files live.
+    // Do NOT overwrite the whole object (DearFlip sets other defaults on it).
+    window.DFLIP = window.DFLIP || {};
+    window.DFLIP.pdfjsSrc = "dflip/js/libs/pdf.min.js";
+    window.DFLIP.pdfjsWorkerSrc = "dflip/js/libs/pdf.worker.min.js";
+    window.DFLIP.threejsSrc = "dflip/js/libs/three.min.js";
+    window.DFLIP.mockupjsSrc = "dflip/js/libs/mockup.min.js";
+    // Optional but helps when served from subpaths (GitHub Pages project sites)
+    window.DFLIP.cMapUrl = "dflip/js/libs/cmaps/";
+    window.DFLIP.cMapPacked = true;
   </script>
 
   <!-- DearFlip JS -->
