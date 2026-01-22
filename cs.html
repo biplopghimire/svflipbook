@@ -30,6 +30,49 @@
     .df-ui {
       background: transparent !important;
     }
+
+    /* Remove shadows/borders so the embed is seamless */
+    .df-container,
+    .df-book-wrapper,
+    .df-book,
+    .df-page,
+    .df-ui,
+    .df-ui-nav,
+    .df-ui-controls,
+    .df-ui-wrapper,
+    .df-ui-btn,
+    .df-ui-btn * {
+      box-shadow: none !important;
+      filter: none !important;
+      outline: none !important;
+    }
+
+    /* The PDF page itself often has a drop shadow */
+    .df-page,
+    .df-page:before,
+    .df-page:after,
+    .df-page-inner,
+    .df-page-content,
+    canvas {
+      box-shadow: none !important;
+      filter: none !important;
+    }
+
+    /* Remove any background panel behind the book */
+    .df-bg,
+    .df-bg-overlay,
+    .df-overlay,
+    .df-backdrop {
+      background: transparent !important;
+    }
+
+    /* Optional: remove rounded corners inside the viewer */
+    .df-container,
+    .df-book-wrapper {
+      border-radius: 0 !important;
+      border: 0 !important;
+    }
+
     #flip {
       height: 90vh;
     }
